@@ -1,0 +1,11 @@
+syntax = "proto3";
+package node;
+
+service Node {
+  rpc ValidateTransaction(ValidateTransactionRequest)
+      returns (ValidateTransactionResponse);
+}
+
+message ValidateTransactionRequest { bytes transaction = 1; }
+
+message ValidateTransactionResponse {}
